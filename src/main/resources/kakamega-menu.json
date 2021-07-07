@@ -1,0 +1,316 @@
+{
+  "0": {
+    "id": 230,
+    "menu_level": 0,
+    "menu_prev_level": 0,
+    "externalAction": null,
+    "text": "End Thank you for visiting kakamega county",
+    "menu_options": [],
+    "max_selections": 0,
+    "inputType": "text"
+  },
+  "1": {
+    "id": 230,
+    "menu_level": 1,
+    "menu_prev_level": 0,
+    "externalAction": null,
+    "text": "CON ${message}\nWelcome to Kakamega County\n1. Parking\n2. Trade Permit\n3. Bill Payments\n0. Log Out",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 2,
+        "previousMenuLevel": 1,
+        "optionInfo": "parking option",
+        "inputValue": 1
+      },
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 7,
+        "previousMenuLevel": 1,
+        "optionInfo": "Trade Permit Option",
+        "inputValue": 2
+      },
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 10,
+        "previousMenuLevel": 1,
+        "optionInfo": "Bill Payments Option",
+        "inputValue": 3
+      },
+      {
+        "type": "response",
+        "response": "END Thank you for using Kakamega County Services.",
+        "next_menu_level": null
+      }
+    ],
+    "max_selections": 3,
+    "inputType": "select"
+  },
+  "2": {
+    "id": 230,
+    "menu_level": 2,
+    "menu_prev_level": 1,
+    "externalAction": null,
+    "text": "CON ${message}\nParking\n1. Daily Parking\n2. Seasonal Parking\n3. Parking Status\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 3,
+        "previousMenuLevel": 2,
+        "optionInfo": "parking zones",
+        "inputValue": 1
+      },
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 3,
+        "previousMenuLevel": 2,
+        "optionInfo": "parking zones",
+        "inputValue": 2
+      },
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 4,
+        "previousMenuLevel": 2,
+        "optionInfo": "parking status",
+        "inputValue": 3
+      },
+      {
+        "type": "response",
+        "response": "END Your account number is ${account_number}",
+        "next_menu_level": null
+      },
+      {
+        "type": "response",
+        "response": "END Your Account balance is ${account_balance}",
+        "next_menu_level": null
+      }
+    ],
+    "max_selections": 3,
+    "inputType": "select"
+  },
+  "3": {
+    "id": 230,
+    "menu_level": 3,
+    "menu_prev_level": 2,
+    "externalAction": null,
+    "text": "CON ${message}\nSelect Vehicle Category\n1. Private 1\n2. PickUp 2\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 4,
+        "previousMenuLevel": 3,
+        "optionInfo": "vehicle category",
+        "inputValue": 1
+      },
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 4,
+        "previousMenuLevel": 3,
+        "optionInfo": "vehicle category",
+        "inputValue": 2
+      },
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 4,
+        "previousMenuLevel": 3,
+        "optionInfo": "vehicle category",
+        "inputValue": 3
+      }
+    ],
+    "max_selections": 3,
+    "inputType": "select"
+  },
+  "4": {
+    "id": 230,
+    "menu_level": 4,
+    "menu_prev_level": 3,
+    "externalAction": null,
+    "text": "CON ${message}\nEnter Vehicle Number plate\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 5,
+        "previousMenuLevel": 1,
+        "optionInfo": "collect vehicle plate number",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 0,
+    "inputType": "text"
+  },
+  "5": {
+    "id": 230,
+    "menu_level": 5,
+    "menu_prev_level": 4,
+    "externalAction": "FETCH_PARKING_FEE",
+    "text": "CON ${message}\nParking charges for ${carRegDetails}\nOnstreet Charge: KES ${amount}\n1. Yes \n0.Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "response",
+        "response": "END Your Account balance is ${account_balance}",
+        "next_menu_level": null
+      }
+    ],
+    "max_selections": 3,
+    "inputType": "select"
+  },
+  "6": {
+    "id": 230,
+    "menu_level": 6,
+    "menu_prev_level": 4,
+    "externalAction": "FETCH_PARKING_STATUS",
+    "text": "CON ${message}\nParking fee status for ${carRegDetails}\n \n0.Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "response",
+        "response": "END Your Account balance is ${account_balance}",
+        "next_menu_level": null
+      }
+    ],
+    "max_selections": 3,
+    "inputType": "select"
+  },
+  "7": {
+    "id": 230,
+    "menu_level": 7,
+    "menu_prev_level": 1,
+    "externalAction": null,
+    "text": "CON ${message}\nTrade Permit\n1. Check Status \n0.Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 8,
+        "previousMenuLevel": 7,
+        "optionInfo": "selected check status option",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 1,
+    "inputType": "select"
+  },
+  "8": {
+    "id": 230,
+    "menu_level": 8,
+    "menu_prev_level": 7,
+    "externalAction": null,
+    "text": "CON ${message}\nEnter your business Id\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 9,
+        "previousMenuLevel": 8,
+        "optionInfo": "entered business id",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 0,
+    "inputType": "text"
+  },
+  "9": {
+    "id": 230,
+    "menu_level": 10,
+    "menu_prev_level": 8,
+    "externalAction": null,
+    "text": "End ${message}\nCheckBusinessStatusMessage\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 9,
+        "previousMenuLevel": 0,
+        "optionInfo": "check status message ",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 0,
+    "inputType": "text"
+  },
+  "10": {
+    "id": 230,
+    "menu_level": 10,
+    "menu_prev_level": 1,
+    "externalAction": null,
+    "text": "CON ${message}\nEnter bill number\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 11,
+        "previousMenuLevel": 10,
+        "optionInfo": "entered bill number",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 0,
+    "inputType": "text"
+  },
+  "11": {
+    "id": 230,
+    "menu_level": 11,
+    "menu_prev_level": 10,
+    "externalAction": null,
+    "text": "End ${message}\nCheckBillStatusMessage\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "level",
+        "response": null,
+        "next_menu_level": 9,
+        "previousMenuLevel": 11,
+        "optionInfo": "check status message ",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 0,
+    "inputType": "text"
+  },
+  "12": {
+    "id": 230,
+    "menu_level": 12,
+    "menu_prev_level": 2,
+    "externalAction": null,
+    "text": "CON ${message}\nEnter Vehicle Number plate to check status\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "response",
+        "response": null,
+        "next_menu_level": 13,
+        "previousMenuLevel": 12,
+        "optionInfo": "collect vehicle plate number to check status",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 0,
+    "inputType": "text"
+  },
+  "13": {
+    "id": 230,
+    "menu_level": 13,
+    "menu_prev_level": 12,
+    "externalAction": "FETCH_PARKING_FEE",
+    "text": "Endd ${message}\nCheckParkingStatusMessage\n0. Back\n00. Main Menu",
+    "menu_options": [
+      {
+        "type": "response",
+        "response": null,
+        "next_menu_level": 14,
+        "previousMenuLevel": 13,
+        "optionInfo": "check parking status message ",
+        "inputValue": ""
+      }
+    ],
+    "max_selections": 0,
+    "inputType": "text"
+  }
+}
